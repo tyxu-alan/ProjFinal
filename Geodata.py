@@ -375,6 +375,9 @@ def plot_map(location=False):
 
 
 if __name__ == "__main__":
+    # change this to be False to avoid waiting
+    initialize = True
+
     # fetch location data
     countrylink = "https://raw.githubusercontent.com/owid/covid-19-data/" \
                   "master/public/data/vaccinations/locations.csv"
@@ -388,14 +391,15 @@ if __name__ == "__main__":
     for i in range(len(country_lst)):
         country_key_DICT[country_lst[i]] = i
 
-    # fetch geometric data
-    # fetch_geodata(country_lst)
+    if initialize:
+        # fetch geometric data
+        fetch_geodata(country_lst)
 
-    # fetch vaccination data
-    # fetch_vacdata()
+        # fetch vaccination data
+        fetch_vacdata()
 
-    # fetch covid data
-    # fetch_covdata()
+        # fetch covid data
+        fetch_covdata()
 
     plot_map()
 

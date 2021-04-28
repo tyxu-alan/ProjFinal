@@ -1,0 +1,16 @@
+Required packages:(note that Basemap cannot use pip install)
+requests
+sqlite3
+json
+csv
+Basemap
+numpy
+matplotlib
+warnings
+pycountry
+
+Run Geodata.py, wait for database to initialize.
+when a map pop up, you can select a country to zoom in.
+
+On the first run, initialize by default
+you can change initialize to False after first run
