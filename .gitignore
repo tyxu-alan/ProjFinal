@@ -1,0 +1,5 @@
+__pycache__
+covid_cache.json
+secrets.py
+geodata.sqlite
+Example.json
